@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f7b42c, #fc575e);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .card {
+            background: #fff;
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 400px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .card p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Feliz Aniversário!</h1>
+        <p id="birthdayMessage">Carregando mensagem...</p>
+    </div>
+
+    <footer>&copy; 2024 - Mensagens de Aniversário</footer>
+
+    <script>
+        // Lista de mensagens de aniversário
+        const messages = [
+            "Que seu dia seja tão especial quanto você! Parabéns!",
+            "Felicidades hoje e sempre! Viva intensamente cada momento.",
+            "Que todos os seus sonhos se realizem neste novo ano de vida!",
+            "Você merece tudo de melhor! Feliz aniversário com muita alegria.",
+            "Continue iluminando o mundo com seu sorriso. Parabéns!",
+            "Que cada instante deste dia seja repleto de felicidade e amor.",
+            "Mais um ano de vida, mais motivos para celebrar! Parabéns!",
+            "Desejo que a alegria de hoje permaneça durante todo o ano.",
+            "Que a paz e a saúde sejam seus maiores presentes hoje e sempre!",
+            "Celebre a vida com gratidão e entusiasmo. Parabéns!",
+            "Que este novo ciclo seja repleto de grandes conquistas!",
+            "Você é especial e merece um aniversário inesquecível!",
+            "Parabéns por mais um ano de vida repleto de bênçãos!",
+            "Aproveite cada segundo deste dia único e cheio de amor!",
+            "Que os sorrisos sejam abundantes e as alegrias infinitas!"
+        ];
+
+        // Selecionar mensagem aleatória
+        function getRandomMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            return messages[randomIndex];
+        }
+
+        // Exibir mensagem no card
+        document.getElementById('birthdayMessage').textContent = getRandomMessage();
+    </script>
+</body>
+</html>
